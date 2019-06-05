@@ -1,40 +1,58 @@
 <html>
-  <head>
-    <title> Primeira pagina de teste </title>
-	<meta charset="UTF-8"/>
-	
-	<style>
-		h1 { 
-		font-family: Garamond;
-		font-size:30pt;
-		color: blue;
-		text-shadow: 2px 2px 30px black;
-	}
-		h2 {
-		font-family: Symbol;
-		font-size: 25pt;
-		color: gray;
-		text-align: center;
-		}
-		
-	</style>
-		
-	
-	
+  
+    <head>
+      <title> formulario</title>
+      
+      <style>
+	    h1 { 
+		    font-family: Garamond;
+		    font-size:30pt;
+		    color: blue;
+		    text-shadow: 2px 2px 30px #953131;
+            text-align: center;
+        }
+     </style>
+
     </head>
-		
-	
-    <body>
-      <h1> Daniel </h1>
-      <h2> hguygoyou@gmail.com </h2>
-      <h2> +55112222 </h2>
-      <h2> +5645646 </h2>
-	  <h3> teste de tudo </h3>
-	  <h4> http://www.uol.com.br </h4>
-	  
-	  
+  
+  <body>
+    <h1>Meu formulario</h1>
+
+    <form  name="formImovel" id="formImovel" action="#" method="post">
+      <label for="proprietario">Proprietario</label>:
+
+      <input type="text" name="proprietario"
+      id="proprietario" size=50 maxlenght=100 
+      placeholder="(ensira o nome do proprietario)" />
+      <br/>
+      <label for="matricula">Matricula:</label>
+      <input type= "number" size="8" maxlength="7"
+      name="matricula" id="matricula" placeholder="(num. mat. imovel)" />
+      <br />
+      <br />
+      <button type="submit" onclick="registraImovel()">Registrar</button>
+      
+      <button type="reset" onclick="limpacampo()">Recomeçar</button>
+    </form>
+  
+  <script>
+ 
+    function registraImovel () {
+
+        event.preventDefault();
+        var form = document.formImovel;
+
+      if (form.proprietario.value == "") {
+          alert ("Voce deve informar o nome cabaço");
+          form.proprietario.focus();
+          return;
+        } 
+      alert ("O proprietario é: " + form.proprietario.value + " sob matricula: " + form.matricula.value);
+    } 
+   
+  </script>
+
+  <script src = "limpacampo.js"></script>
+      
     </body>
-    
-
-
 </html>
