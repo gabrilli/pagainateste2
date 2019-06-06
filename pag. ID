@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Gerador de ID Digital</title>
+        
+        <style>
+            h1 { 
+		    font-family: Garamond;
+		    font-size:60pt;
+		    color: rgb(13, 12, 117);
+		    text-shadow: 2px 2px 30px #25b612;
+            text-align: center;
+        }
+        
+            h2 {
+
+            font-family: Garamond;
+		    font-size:30pt;
+		    color: black;
+		    text-align: left;                       
+        }
+        </style>
+
+    </head>
+
+<body>
+
+<h1>Crie sua primeire ID Digital na Blockchain da Ethereum!</h1>
+<h2> É totalmente gratuito e você poderá utilizá-la em qualquer lugar</h2>
+<h2> Basta inserir os dados requisitados para obter seu hash personalizado!</h2>
+
+<form name="_Nome" id="_nome" action="#" method="post">
+<label for="_Nome">Nome</label>:
+<input type="text" name="nome"
+id="nome" size=50 maxlenght=100
+placeholder="Inserir nome completo" />
+<br/>
+<br/>
+
+<form name="_CPF" id="_CPF" action="#" method="post">
+        <label for="_CPF">CPF</label>:
+        <input type="number" name="CPF"
+        id="CPF" size=50 maxlenght=100
+        placeholder="Inserir CPF (somente números)" />
+<br/>
+<br/>
+
+<form name="_Cel" id="_CEL" action="#" method="post">
+        <label for="_CEL">Celular</label>:
+        <input type="number" name="Celular"
+        id="Celular" size=50 maxlenght=100
+        placeholder="Inserir celular com DDD (só números)" />
+<br/>
+<br/>
+
+<form name="_Senha" id="_Senha" action="#" method="post">
+        <label for="_Senha">Senha</label>:
+        <input type="text" name="Senha"
+        id="Senha" size=50 maxlenght=100
+        placeholder="Digite sua senha (maximo de 100 caracteres)" />
+        
+<form name="_Senha2" id="_Senha2" action="#" method="post">
+    <label for="_Senha2">Senha</label>:
+    <input type="text" name="Senha"
+    id="Senha" size=50 maxlenght=100
+    placeholder="Repita a senha" />
+<button type="submit" onclick="VerificaSenha()">Registrar</button>
+
+
+</form>
+
+<script>
+
+function VerificaSenha() {
+    event.preventDefault();
+    var form = document._Senha;
+    var form2 = document._Senha2;
+
+    if (form._Senha.value != form._Senha2.value) {
+        alert ("Senhas não coincidem");
+        form._Senha.focus();
+        return;
+    }
+}
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
