@@ -26,7 +26,7 @@
 
 <h1>Crie sua primeire ID Digital na Blockchain da Ethereum!</h1>
 <h2> É totalmente gratuito e você poderá utilizá-la em qualquer lugar</h2>
-<h2> Basta inserir os dados requisitados para obter seu hash personalizado!</h2>
+<h3> Basta inserir os dados requisitados para obter seu hash personalizado!</h3>
 
 <form name="_Nome" id="_nome" action="#" method="post">
 <label for="_Nome">Nome</label>:
@@ -75,7 +75,7 @@ function VerificaSenha() {
     var form = document._Senha;
     var form2 = document._Senha2;
 
-    if (form._Senha.value != form._Senha2.value) {
+    if (form =! form2) {
         alert ("Senhas não coincidem");
         form._Senha.focus();
         return;
